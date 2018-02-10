@@ -10,7 +10,10 @@
                     <label for="email">Email address</label>
                     <input name="email" type="email" class="form-control" id="email"
                            placeholder="name@example.com">
-
+                <div class="form-group mt-2">
+                        <label for="subject">Subject</label>
+                        <textarea name="subject" class="form-control" id="subject" ></textarea>
+                    </div>
                 <div class="form-group mt-2">
                     <label for="message">Message</label>
                     <textarea name="message" class="form-control" id="message" rows="3"></textarea>
