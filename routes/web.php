@@ -17,6 +17,10 @@ Route::get('/about', 'PagesController@about')->name('about');
 
 Route::get('/contact', 'PagesController@contact')->name('contact');
 
+Route::post('/contact', 'PagesController@store')->name('contact.store');
+
+Route::get('/thanks/{name}', 'PagesController@thanks')->name('thanks');
+
 Route::get('/signin', function () {
     return view('pages.signin');
 });
@@ -33,11 +37,3 @@ Route::get('/viewmessage', function () {
     return view('pages.viewmessage');
 });
 
-Route::post('/contact', function () {
-
-    $data = request()->all();
-
-    echo "Email: ". $data['email'] . '<br>';
-    echo "Message: ". $data['message'];
-
-});

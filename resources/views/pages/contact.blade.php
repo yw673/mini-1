@@ -4,15 +4,15 @@
     <div class="card col-8 mt-2" >
         <div class="card-title mt-2"><h2>Contact Form</h2></div>
         <div class="card-body">
-            <form action="/contact" method="post">
+            <form action="{{route('contact.store')}}" method="post">
                 {{csrf_field()}}
                 <div class="form-group ">
                     <label for="email">Email address</label>
                     <input name="email" type="email" class="form-control" id="email"
                            placeholder="name@example.com">
                 <div class="form-group mt-2">
-                        <label for="subject">Subject</label>
-                        <textarea name="subject" class="form-control" id="subject" ></textarea>
+                        <label for="subject">Name</label>
+                        <textarea name="name" class="form-control" id="name" ></textarea>
                     </div>
                 <div class="form-group mt-2">
                     <label for="message">Message</label>
